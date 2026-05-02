@@ -82,7 +82,7 @@ body {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .container {
-    padding: 30px;
+    padding: 10px;
   }
 
   .grid {
