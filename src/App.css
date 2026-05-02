@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial;
+  overflow-x: hidden;
 }
 
 .header {
@@ -18,8 +23,7 @@ body {
 }
 
 .hero {
-  width: 1342px;
-  height: 700px;
+  min-height: 500px;
   background: url("https://img.freepik.com/premium-photo/black-curtain-is-partially-drawn-right-revealing-beige-curtain-left-side_1353972-3538.jpg?semt=ais_hybrid&w=740&q=80") center/cover;
   color: white;
   display: flex;
@@ -49,13 +53,14 @@ body {
   background: #4f4f4f;
   padding: 20px;
   text-align: center;
-  color: black
-  
-  
+  color: black;
+  border-radius: 10px;
 }
 
 .img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -82,6 +87,14 @@ body {
 
   .hero h1 {
     font-size: 26px;
+  }
+
+  .hero {
+    min-height: 300px;
+  }
+
+  .img {
+    height: 200px;
   }
 }
 

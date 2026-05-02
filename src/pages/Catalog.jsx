@@ -15,9 +15,7 @@ export default function Catalog() {
             <img 
               src={item.img} 
               alt={item.title} 
-              className="img" 
-              style={{ width: '100%', height: '300px', objectFit: 'cover' } } 
-              
+              className="img"
             />
             <h3>{item.title}</h3>
           </div>
