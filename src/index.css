@@ -55,7 +55,9 @@ body {
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-right: 900px;
+  
+
 }
 
 /* КНОПКИ */
@@ -113,28 +115,26 @@ body {
   background: #0088cc;
   color: white;
   
-  /* ИЗМЕНЕНИЯ ДЛЯ ОВАЛА */
-  width: auto;             /* Ширина теперь подстраивается под текст */
-  height: 50px;            /* Удобная высота (чуть меньше 60px) */
-  padding: 0 20px;         /* Отступы по бокам, чтобы текст не прилипал к краям */
-  border-radius: 50px;     /* Овальные концы ("таблетка") */
+  /* Исправляем размер для ПК */
+  width: auto;               /* Ширина по контенту */
+  min-width: 120px;         /* Минимальная ширина, чтобы не была слишком мелкой */
+  height: 50px;
+  padding: 0 20px;           /* Отступы по бокам */
+  border-radius: 50px;
   
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   
-  /* Уменьшил шрифт до 18px, чтобы смотрелось аккуратно на мобильном */
+  /* ГЛАВНОЕ: запрещаем слову вылезать или переноситься */
+  white-space: nowrap;       
   font-size: 18px; 
+  font-weight: bold;
   
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   z-index: 1000;
   transition: transform 0.3s;
-}
-
-/* Эффект при нажатии */
-.telegram:active {
-  transform: scale(0.95);
 }
 
 /* АНИМАЦИИ */
