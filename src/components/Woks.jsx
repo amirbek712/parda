@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { db } from "../firebase";
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 const defaultWorks = [
   "https://i.pinimg.com/736x/c8/e7/ef/c8e7ef3ab6e695e59184ae59387d39cc.jpg",
@@ -10,11 +12,14 @@ export default function Works() {
   const [works, setWorks] = useState(defaultWorks);
 
   useEffect(() => {
-    // Подгружаем фото, которые мы добавили из админ-панели
-    const customWorks = JSON.parse(localStorage.getItem("customWorks")) || [];
-    if (customWorks.length > 0) {
-      setWorks([...customWorks, ...defaultWorks]);
-    }
+      // Слушаем изменения в коллекции "works" в Firebase
+    const q = query(collection(db, "works"), orderBy("createdAt", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const firestoreWorks = snapshot.docs.map(doc => doc.data().url);
+      setWorks([...firestoreWorks, ...defaultWorks]);
+    });
+
+    return () => unsubscribe();
   }, []);
 
   return (
