@@ -112,16 +112,29 @@ body {
   right: 20px;
   background: #0088cc;
   color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  
+  /* ИЗМЕНЕНИЯ ДЛЯ ОВАЛА */
+  width: auto;             /* Ширина теперь подстраивается под текст */
+  height: 50px;            /* Удобная высота (чуть меньше 60px) */
+  padding: 0 20px;         /* Отступы по бокам, чтобы текст не прилипал к краям */
+  border-radius: 50px;     /* Овальные концы ("таблетка") */
+  
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 24px;
+  
+  /* Уменьшил шрифт до 18px, чтобы смотрелось аккуратно на мобильном */
+  font-size: 18px; 
+  
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   z-index: 1000;
+  transition: transform 0.3s;
+}
+
+/* Эффект при нажатии */
+.telegram:active {
+  transform: scale(0.95);
 }
 
 /* АНИМАЦИИ */
