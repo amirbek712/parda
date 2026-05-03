@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 const defaultWorks = [
-  "https://images.unsplash.com/photo-1616628182504-3c3c4f8f4c5c",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-  "https://images.unsplash.com/photo-1582582494700-0a0b33f0a4b5",
+  "https://i.pinimg.com/736x/c8/e7/ef/c8e7ef3ab6e695e59184ae59387d39cc.jpg",
+  "https://i.pinimg.com/736x/dd/4a/df/dd4adfcee67a4236629f514edffef56b.jpg",
+  "https://i.pinimg.com/1200x/21/87/f6/2187f65e2b1b763f9a39ede188a4490a.jpg",
 ];
 
 export default function Works() {
