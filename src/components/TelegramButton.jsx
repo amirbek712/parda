@@ -1,7 +1,7 @@
 export default function TelegramButton() {
   return (
     <a
-      href="https://t.me/Amirbek_712"
+      href="https://t.me/@Pretty_shtor"
       className="telegram"
       target="_blank"
       rel="noreferrer"
