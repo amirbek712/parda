@@ -149,7 +149,7 @@ body {
 }
 
 /* МОБИЛЬНАЯ ВЕРСИЯ */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .hero {
     min-height: 350px;
     padding: 0 5%;
